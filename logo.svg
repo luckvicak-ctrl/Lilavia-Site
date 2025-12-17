@@ -1,0 +1,36 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640" height="200" viewBox="0 0 640 200" fill="none"
+     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lilavia Beratung – Logo">
+  <style>
+    :root{
+      --gold:#FFD700;
+      --violet-dark:#4B006E;
+      --violet:#9468C6;
+    }
+    .word{ font-family: "Segoe UI","Helvetica Neue",Arial,sans-serif; }
+  </style>
+
+  <!-- Hintergrund transparent -->
+  <rect x="0" y="0" width="640" height="200" fill="transparent"/>
+
+  <!-- Herzsymbol links -->
+  <g transform="translate(30,30)">
+    <!-- Herz -->
+    <path d="M64 30
+             C64 13,50 4,38 10
+             C30 14,27 22,26 26
+             C25 22,22 14,14 10
+             C2 4,-12 13,-12 30
+             C-12 46,2 63,26 81
+             C50 63,64 46,64 30 Z"
+          transform="translate(48,38) scale(1.05)"
+          fill="var(--gold)"/>
+  </g>
+
+  <!-- Wortmarke rechts vom Herz -->
+  <g class="word" transform="translate(160,110)">
+    <text x="0" y="0" font-size="56" font-weight="700" fill="var(--violet-dark)">Lilavia</text>
+    <text x="235" y="0" font-size="28" font-weight="600" fill="var(--violet)">Beratung</text>
+  </g>
+</svg>
