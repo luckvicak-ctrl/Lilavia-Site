@@ -1,105 +1,33 @@
-
 <!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LilaVia Beratung – Klarheit & liebevolle Lösungen</title>
-  <meta name="description" content="LilaVia Beratung: Ein sicherer Raum für Klarheit, Verbindung und liebevolle Lösungen. Online-Beratung & Terminbuchung.">
- <link rel="stylesheet" href="./styles.css">
+  <title>Lilavia Beratung – Klarheit & liebevolle Lösungen</title>
+  <meta name="description" content="Lilavia Beratung: Ein sicherer Raum für Klarheit, Verbindung und liebevolle Lösungen. Online-Beratung & Terminbuchung.">
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="32x32" href="assets/favicon-32.png" type="image/png">
+  <link rel="icon" sizes="64x64" href="assets/favicon-64.png" type="image/png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
-  <header class="site-header">
-  <a href="/" class="logo" aria-label="Lilavia Beratung – Startseite">
-    <!-- Dein Logo-SVG inline -->
-    <svg width="200" height="60" viewBox="0 0 640 200" fill="none"
-         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lilavia Beratung – Logo">
-      <style>
-        :root{
-          --gold:#FFD700;
-          --violet-dark:#4B006E;
-          --violet:#9468C6;
-        }
-        .word{ font-family: "Segoe UI","Helvetica Neue",Arial,sans-serif; }
-      </style>
-      <rect x="0" y="0" width="640" height="200" fill="transparent"/>
-      <g transform="translate(30,30)">
-        <path d="M64 30
-                 C64 13,50 4,38 10
-                 C30 14,27 22,26 26
-                 C25 22,22 14,14 10
-                 C2 4,-12 13,-12 30
-                 C-12 46,2 63,26 81
-                 C50 63,64 46,64 30 Z"
-              transform="translate(48,38) scale(1.05)"
-              fill="var(--gold)"/>
-      </g>
-      <g class="word" transform="translate(160,110)">
-        <text x="0" y="0" font-size="56" font-weight="700" fill="var(--violet-dark)">Lilavia</text>
-        <text x="235" y="0" font-size="28" font-weight="600" fill="var(--violet)">Beratung</text>
-      </g>
-    </svg>
-  </a>
-
-  <nav class="main-nav">
-    <ul>
-      <li><a href="#angebot">Angebot</a></li>
-      <li><a href="#ueber">Über mich</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
-    </ul>
-  </nav>
-</header>
-
 <body>
+  <header class="header">
+    <!-- Hero-SVG inline oder als Bild -->
+    <img src="assets/hero.svg" alt="Lilavia Hero" class="hero-img">
 
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="1440" height="560" viewBox="0 0 1440 560" fill="none"
-     xmlns="http://www.w3.org/2000/svg" role="img"
-     aria-label="Lilavia Beratung – Hero mit Claim">
-  <defs>
-    <!-- Hintergrund-Verlauf -->
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%"  stop-color="#3A1E59"/>
-      <stop offset="100%" stop-color="#6E48A0"/>
-    </linearGradient>
-    <!-- Heller Text-Farbverlauf -->
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"  stop-color="#EBD8FF"/>
-      <stop offset="100%" stop-color="#FFFFFF"/>
-    </linearGradient>
-    <!-- Weiche Schatten -->
-    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.25"/>
-    </filter>
-  </defs>
-
-  <!-- Hintergrund -->
-  <rect width="100%" height="100%" fill="url(#bg)"/>
-
-  <!-- Zarte Wellen -->
-  <path d="M0,420 C240,360 480,520 720,460 C960,400 1200,520 1440,460 L1440,560 L0,560 Z"
-        fill="#5A3787" opacity="0.35"/>
-  <path d="M0,460 C240,420 480,560 720,500 C960,440 1200,560 1440,500 L1440,560 L0,560 Z"
-        fill="#7F5AB7" opacity="0.22"/>
-
-  <!-- Titel & Claim -->
-  <g transform="translate(120,200)" filter="url(#shadow)">
-    <text x="0" y="0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif"
-          font-size="64" font-weight="800" fill="url(#accent)">
-      Lilavia Beratung
-    </text>
-    <text x="0" y="60" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif"
-          font-size="28" font-weight="500" fill="#F5ECFF">
-           Dein Weg zu Klarheit und liebevollen Lösungen
-    </text>
-  </g>
-</svg>
-    assets/hero.svg
     <nav class="nav" aria-label="Hauptnavigation">
-      <div class="brand"><img src="assets/logo.svg</a></div>
-      <div>
-        #Leistungen</a>
-        #Über mich</a>
-        #Kontakt</a>
+      <div class="brand">
+        <!-- Logo korrekt eingebunden -->
+        <img src="assets/logo.svg" alt="Lilavia Beratung Logo">
+      </div>
+      <div class="nav-links">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ueber">Über mich</a>
+        <a href="#kontakt">Kontakt</a>
       </div>
     </nav>
   </header>
@@ -111,8 +39,8 @@
           <h1 class="h1">Ein Weg zu Klarheit & liebevoller Verbindung</h1>
           <p class="p">Lilavia Beratung begleitet dich mit Herz und Struktur – hin zu Dialog, Verständnis und innerem Frieden. Für Einzelpersonen und Paare, online und flexibel.</p>
           <div class="cta">
-            #Termin buchen</a>
-            #Leistungen ansehen</a>
+            <a href="#termin" class="button">Termin buchen</a>
+            <a href="#leistungen" class="button">Leistungen ansehen</a>
           </div>
         </div>
         <div>
@@ -129,6 +57,7 @@
       </div>
     </section>
 
+    <!-- Leistungen -->
     <section class="container section" id="leistungen">
       <h2>Leistungen</h2>
       <div class="card-grid">
@@ -147,43 +76,10 @@
       </div>
     </section>
 
+    <!-- Termin -->
     <section class="container section" id="termin">
       <h2>Termin buchen</h2>
       <p class="p">Die Terminbuchung erfolgt online. Wähle deinen Wunschtermin – einfach und sicher.</p>
       <div class="card">
         <h3>Online-Buchung</h3>
-        <p><a class="button" href="https://ALTER/lilavia-beratungJetzt Termin auswählen</a></p>
-        <small>Hinweis: Der Link ist ein Platzhalter und wird nachgereicht.</small>
-      </div>
-    </section>
-
-    <section class="container section" id="ueber">
-      <h2>Über mich</h2>
-      <p class="p">Ich arbeite wertschätzend, strukturiert und mit viel Herz. Mir ist wichtig, einen geschützten Raum zu schaffen, in dem Klarheit und Verbindung wachsen dürfen.</p>
-    </section>
-
-    <section class="container section" id="kontakt">
-      <h2>Kontakt</h2>
-      <div class="card">
-        <p class="p">Schreibe mir gern über das Kontaktformular oder buche direkt einen Termin.</p>
-        <ul>
-          <li>E-Mail: mailto:kontakt@lilavia-beratung.de</a> (Platzhalter)</li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-      <small>© 2025 Lilavia Beratung</small>
-      <small>impressum.htmlImpressum</a      <small>impressum.htmlImpressum</a> · datenschutz.htmlDatenschutz</a></small>
-    </div>
-  </footer>
-</body>
-
-
-
-
-
-
-
+        <p><a class="button" href="https://ALTER/lilavia-beratung">Jetzt Termin auswählen
