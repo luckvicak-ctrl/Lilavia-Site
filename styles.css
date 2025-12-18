@@ -1,13 +1,11 @@
 
 /* Farbschema */
 :root {
-  --purple-900: #4B006E;
-  --purple-700: #6A1FA2;
-  --purple-100: #F8E8F8;
-  --gold-500: #FFD700;
-  --text-900: #1f1333;
-  --text-600: #5b4b7a;
-  --white: #ffffff;
+  --brand-deep:#3a1e59;
+  --brand:#6e48a0;
+  --brand-light:#b084d7;
+  --accent:#FFD700;
+  --text:#2b2340;
 }
 
 /* Grundlayout */
@@ -26,10 +24,7 @@ body {
   padding: 24px;
 }
 
-.nav {
-  display: flex;
-  justify-content: flex-end;
-}
+.nav { position:absolute; top:24px; left:24px; right:24px; display:flex; justify-content:space-between; align-items:center;}
 
 .nav a {
   color: #ffffff;
@@ -56,6 +51,15 @@ body {
   height: auto;
   display: block;
 }
+.hero-panel { background:#fff; border-radius:16px; margin-top:-60px; box-shadow:0 6px 20px rgba(58,30,89,.12);}
+.hero-panel .cols { display:grid; grid-template-columns:1.2fr .8fr; gap:32px; padding:32px;}
+
+.cta { display:flex; gap:12px; margin-top:16px;}
+.button { background:var(--brand); color:#fff; padding:12px 18px; border-radius:10px; border:none; cursor:pointer; font-weight:700;}
+.button.alt { background:#fff; color:var(--brand); border:2px solid var(--brand);}
+.section { padding:48px 0;}
+.card-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+.card { background:#fff; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,.08); padding:24px;}
 
 /* Footer */
 .site-footer {
@@ -66,8 +70,15 @@ body {
 }
 
 .site-footer p {
+  font-size:18px;
   margin: 0;
-  color: #6c5c8f;
+  color: #4a3d68;
 }
+.h1 { font-size:40px; margin:0 0 12px;}
+
+@media(max-width:900px){ .hero-panel .cols{grid-template-columns:1fr;} .card-grid{grid-template-columns:1fr;} }
 
 
+.header img { width:100%; display:block;}
+
+.nav .brand img { height:40px;}
