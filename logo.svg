@@ -1,7 +1,7 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="640" height="200" viewBox="0 0 640 200" fill="none"
-     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lilavia Beratung – Logo">
+     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LilaVia Beratung – Logo">
   <style>
     :root{
       --gold:#FFD700;
@@ -34,3 +34,4 @@
     <text x="235" y="0" font-size="28" font-weight="600" fill="var(--violet)">Beratung</text>
   </g>
 </svg>
+
