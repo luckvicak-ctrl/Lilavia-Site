@@ -32,10 +32,21 @@
   />
 </section>
 
-  <main>
+ <main class="container">
+     <!-- Seiteninhalt -->
   </main>
+  <footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Lilavia Beratung</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
+
 
 
 
