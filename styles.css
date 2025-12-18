@@ -24,3 +24,15 @@ body { margin:0; font-family:system-ui,-apple-system,"Segoe UI","Helvetica Neue"
 .card { background:#fff; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,.08); padding:24px;}
 .footer { background:#f7f4fb; border-top:1px solid #ede7f7; padding:24px;}
 .footer.footer small { color:#6c5c8f;}
+
+/* HERO */
+.hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
