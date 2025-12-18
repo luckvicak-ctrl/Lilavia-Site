@@ -1,9 +1,13 @@
+
+/* Farbschema */
 :root {
-  --brand-deep: #3a1e59;
-  --brand: #6e48a0;
-  --brand-light: #b084d7;
-  --accent: #ffd700;
-  --text: #2b2340;
+  --purple-900: #4B006E;
+  --purple-700: #6A1FA2;
+  --purple-100: #F8E8F8;
+  --gold-500: #FFD700;
+  --text-900: #1f1333;
+  --text-600: #5b4b7a;
+  --white: #ffffff;
 }
 
 /* Grundlayout */
@@ -65,4 +69,5 @@ body {
   margin: 0;
   color: #6c5c8f;
 }
+
 
