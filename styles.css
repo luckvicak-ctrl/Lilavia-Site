@@ -63,11 +63,17 @@ h1, h2, h3 {
 
 /* Hero */
 .hero {
-  position: relative;
-  min-height: 70vh;
-  background: url("hero.png") center / cover no-repeat;
+  width: 100%;
+  background: var(--brand-deep);
 }
 
+.hero-img {
+  width: 100%;
+  height: auto;        /* KEIN Abschneiden */
+  display: block;
+  max-height: 360px;   /* Hero bewusst kleiner */
+  object-fit: contain;/* GANZES Bild sichtbar */
+}
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -204,3 +210,4 @@ h1, h2, h3 {
     flex-direction: column;
   }
 }
+
