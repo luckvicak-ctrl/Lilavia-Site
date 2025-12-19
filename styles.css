@@ -1,11 +1,11 @@
 
 /* Farbschema */
 :root {
-  --brand-deep:#3a1e59;
-  --brand:#6e48a0;
-  --brand-light:#b084d7;
-  --accent:#FFD700;
-  --text:#2b2340;
+  --brand-deep: #3a1e59;
+  --brand: #6e48a0;
+  --brand-light: #b084d7;
+  --accent: #FFD700;
+  --text: #2b2340;
 }
 
 /* Grundlayout */
@@ -13,12 +13,8 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   color: var(--text);
-  background: linear-gradient(
-    180deg,
-    var(--brand-deep) 0%,
-    var(--brand) 40%,
-    #f6f2fb 100%
-    padding-top: 72px);
+  background: linear-gradient(180deg, var(--brand-deep) 0%, var(--brand) 40%, #f6f2fb 100%);
+  padding-top: 72px; /* Inhalt nicht unter die feste Navigation schieben */
 }
 
 /* Navigation */
@@ -27,8 +23,8 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  padding:16px 24px;
-  z-index /* über Hero/Panel */
+  padding: 16px 24px;
+  z-index: 10; /* über Hero/Panel */
 }
 
 .nav {
@@ -62,14 +58,17 @@ body {
   background: url("hero.png") center / cover no-repeat, var(--brand-deep);
   color: #fff;
   padding: 40px 0;
+  position: relative; /* nötig für Overlay */
 }
 
+/* Falls du <img class="hero-img"> nutzen willst */
 .hero-img {
   width: 100%;
   height: 65vh;
   object-fit: cover;
   display: block;
 }
+
 .hero h1 {
   font-size: 2.8rem;
   margin-bottom: 16px;
@@ -80,40 +79,75 @@ body {
   margin-bottom: 24px;
 }
 
-.hero.button {
+.hero .button {
   font-size: 1rem;
 }
+
+/* Overlay für bessere Lesbarkeit über dem Bild */
+.hero-overlay {
+  position: absolute;
+  inset: 0;                 /* top/right/bottom/left: 0 */
+  background: rgba(0, 0, 0, 0.35);
+  display: grid;
+  place-items: center;
+}
+
+.hero-content { position: relative; z-index: 1; }
+
 .hero-panel {
   background: #ffffff;
-  border-radius: 20px;
+   border-radius: 20px;
   margin-top: -80px;
-  box-shadow: 0 20px 50px rgba(58,30,89,.18);
+  box-shadow: 0 20px 50px rgba(58, 30, 89, .18);
   position: relative;
   z-index: 2;
 }
 
-.hero-panel .cols { display:grid; grid-template-columns:1.2fr .8fr; gap:32px; padding:32px;}
-
-.cta { display:flex; gap:12px; margin-top:16px;}
-.button { background:var(--brand); color:#fff; padding:12px 18px; border-radius:10px; border:none; cursor:pointer; font-weight:700;display: inline-block}
-.button.alt { background:#fff; color:var(--brand); border:2px solid var(--brand);}
-.section {
-  padding: 72px 0;
+.hero-panel .cols {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 32px;
+  padding: 32px;
 }
 
-.section.light {
-  background: #ffffff;
+/* CTA & Buttons */
+.cta { display: flex; gap: 12px; margin-top: 16px; }
+
+.button {
+  background: var(--brand);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
 }
 
-.section.soft {
-  background: #f7f4fb;
+.button.alt {
+  background: #fff;
+  color: var(--brand);
+  border: 2px solid var(--brand);
 }
 
+/* Sektionen */
+.section { padding: 72px 0; }
+.section.light { background: #ffffff; }
+.section.soft { background: #f7f4fb; }
+
+/* Karten & Grid */
 .card {
   background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(58,30,89,.12);
+  box-shadow: 0 10px 30px rgba(58, 30, 89, .12);
   padding: 28px;
+}
+
+.card-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr); /* Desktop */
 }
 
 /* Footer */
@@ -125,52 +159,25 @@ body {
 }
 
 .site-footer p {
-  font-size:18px;
+  font-size: 18px;
   margin: 0;
   color: #4a3d68;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .hero {
-    max-height: 50vh;
-  .card-grid { grid-template-columns: 1fr; }
-  }
+  .hero { max-height: 50vh; }
+  .hero-img { height: 50vh; }
 
-  .hero-img {
-    height: 50vh;
-  }
-
-  .hero-panel {
-  background: #ffffff;
-  border-radius: 20px;
-  margin-top: -80px;
-  box-shadow: 0 20px 50px rgba(58,30,89,.18);
-  position: relative;
-  z-index: 2;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;                 /* top/right/bottom/left: 0 */
-  background: rgba(0,0,0,0.35);
-  display: grid;
-  place-items: center;  
-}
+  .hero-panel { margin-top: -40px; }
 
   .hero-panel .cols {
     grid-template-columns: 1fr;
     padding: 24px;
   }
 
-.card-grid {
-  display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(3, 1fr); /* Desktop */
+  .card-grid { grid-template-columns: 1fr; }
 }
 
-.header.site { width:100%; display:block;}
-
-.nav .brand img { height:40px;}
-
-
-
+/* Sonstiges */
+header img { width: 100%; display: block; }
