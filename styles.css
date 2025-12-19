@@ -1,27 +1,33 @@
-
-/* =========================
-   Farbschema (CSS Custom Properties)
-   ========================= */
-:root {
-  --brand-deep: #3a1e59;
-  --brand: #6e48a0;
-  --brand-light: #b084d7;
-  --accent: #FFD700;
-  --text: #2b2340;
-
-  /* Hilfs-Variablen */
-  --surface: #ffffff;
-  --surface-soft: #f7f4fb;
-  --border-soft: #ede7f7;
-  --shadow-1: 0 6px 18px rgba(0,0,0,0.08);
-  --shadow-2: 0 20px 50px rgba(58,30,89,.18);
-  --radius-s: 10px;
-  --radius-m: 14px;
-  --radius-l: 20px;
+/* HERO */
+.hero {
+display: flex;
+  background: url("hero.png") center / cover no-repeat;
+align-items: center;
+justify-content: center;
+text-align: center;
+@@ -86,7 +87,21 @@ body {
+position: relative;
+z-index: 2;
+}
+.hero-content h1 {
+  color: #fff;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
 }
 
-/* =========================
-   Grundlayout
-   ========================= */
-*,
-*::before,
+.hero-content p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero .cta .button {
+  margin: 0 0.5rem;
+}
+.hero-panel .cols { display:grid; grid-template-columns:1.2fr .8fr; gap:32px; padding:32px;}
+
+.cta { display:flex; gap:12px; margin-top:16px;}
+@@ -176,3 +191,4 @@ body {
+}
+
+
