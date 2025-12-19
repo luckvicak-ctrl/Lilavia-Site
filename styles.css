@@ -95,7 +95,7 @@ body {
 .hero-panel .cols { display:grid; grid-template-columns:1.2fr .8fr; gap:32px; padding:32px;}
 
 .cta { display:flex; gap:12px; margin-top:16px;}
-.button { background:var(--brand); color:#fff; padding:12px 18px; border-radius:10px; border:none; cursor:pointer; font-weight:700;}
+.button { background:var(--brand); color:#fff; padding:12px 18px; border-radius:10px; border:none; cursor:pointer; font-weight:700;display: inline-block}
 .button.alt { background:#fff; color:var(--brand); border:2px solid var(--brand);}
 .section {
   padding: 72px 0;
@@ -129,7 +129,6 @@ body {
   margin: 0;
   color: #4a3d68;
 }
-.h1 { font-size:40px; margin:0 0 12px;}
 
 @media (max-width: 900px) {
   .hero {
@@ -172,5 +171,6 @@ body {
 .header.site { width:100%; display:block;}
 
 .nav .brand img { height:40px;}
+
 
 
