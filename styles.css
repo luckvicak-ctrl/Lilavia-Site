@@ -23,7 +23,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  padding: 16px 24px;
+  padding: 0;
   z-index: 10; /* über Hero/Panel */
 }
 
@@ -33,11 +33,15 @@ body {
   align-items: center;
 }
 
-.nav a {
-  color: #ffffff;
+.nav-under-hero a {
+  color: var(--brand-deep);
   text-decoration: none;
-  margin-left: 16px;
   font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 8px;}
+
+.nav-under-hero a:hover {
+  background: rgba(110,72,160,0.08);
 }
 
 /* Container */
@@ -53,8 +57,6 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 60vh;
-  min-height: 300px;
   background: url("hero.png") center / cover no-repeat, var(--brand-deep);
   color: #fff;
   padding: 40px 0;
@@ -181,3 +183,4 @@ body {
 
 /* Sonstiges */
 header img { width: 100%; display: block; }
+
