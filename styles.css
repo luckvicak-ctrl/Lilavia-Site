@@ -16,7 +16,6 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   color: var(--text);
   background: linear-gradient(180deg, var(--brand-deep), var(--brand) 40%, #f6f2fb);
-  padding-top: 72px;
 }
 
 h1, h2, h3 {
@@ -35,14 +34,25 @@ h1, h2, h3 {
 }
 
 /* Navigation */
-.site-header {
-  position: fixed;
-  inset: 0 0 auto 0;
-  background: #fff;
-  z-index: 10;
-  box-shadow: 0 2px 10px rgba(0,0,0,.05);
+
+nav-under-hero {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 16px 0 8px;
 }
 
+.nav-under-hero a {
+  color: var(--brand-deep);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.nav-under-hero a:hover {
+  background: rgba(110,72,160,.08);
+}
 .nav {
   display: flex;
   justify-content: center;
@@ -197,7 +207,7 @@ h1, h2, h3 {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .card-grid {
     grid-template-columns: 1fr;
   }
@@ -208,6 +218,15 @@ h1, h2, h3 {
 
   .cta {
     flex-direction: column;
+  }
+}
+ .hero-img {
+    max-height: 220px;
+  }
+
+  .nav-under-hero {
+    flex-wrap: wrap;
+    gap: 12px;
   }
 }
 
