@@ -156,12 +156,12 @@ body {
 .site-footer {
   background: #f7f4fb;
   border-top: 1px solid #ede7f7;
-  padding: 24px;
+  padding: 16px;
   text-align: center;
 }
 
 .site-footer p {
-  font-size: 18px;
+  font-size: 14px;
   margin: 0;
   color: #4a3d68;
 }
@@ -183,4 +183,5 @@ body {
 
 /* Sonstiges */
 header img { width: 100%; display: block; }
+
 
