@@ -18,19 +18,24 @@ body {
     var(--brand-deep) 0%,
     var(--brand) 40%,
     #f6f2fb 100%
-  );
+    padding-top: 72px);
 }
 
 /* Navigation */
 .site-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding: 24px;
+  padding:16px 24px;
+  z-index /* über Hero/Panel */
 }
 
-.nav { position:absolute; top:24px; left:24px; right:24px; display:flex; justify-content:space-between; align-items:center;}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .nav a {
   color: #ffffff;
@@ -54,7 +59,7 @@ body {
   text-align: center;
   height: 60vh;
   min-height: 300px;
-  background: var(--brand-deep);
+  background: url("hero.png") center / cover no-repeat, var(--brand-deep);
   color: #fff;
   padding: 40px 0;
 }
@@ -75,7 +80,7 @@ body {
   margin-bottom: 24px;
 }
 
-.hero .button {
+.hero.button {
   font-size: 1rem;
 }
 .hero-panel {
@@ -129,6 +134,7 @@ body {
 @media (max-width: 900px) {
   .hero {
     max-height: 50vh;
+  .card-grid { grid-template-columns: 1fr; }
   }
 
   .hero-img {
@@ -136,22 +142,35 @@ body {
   }
 
   .hero-panel {
-    margin-top: -40px;
-  }
+  background: #ffffff;
+  border-radius: 20px;
+  margin-top: -80px;
+  box-shadow: 0 20px 50px rgba(58,30,89,.18);
+  position: relative;
+  z-index: 2;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;                 /* top/right/bottom/left: 0 */
+  background: rgba(0,0,0,0.35);
+  display: grid;
+  place-items: center;  
+}
 
   .hero-panel .cols {
     grid-template-columns: 1fr;
     padding: 24px;
   }
 
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
+.card-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr); /* Desktop */
 }
 
-
-
-.header img { width:100%; display:block;}
+.header.site { width:100%; display:block;}
 
 .nav .brand img { height:40px;}
+
 
